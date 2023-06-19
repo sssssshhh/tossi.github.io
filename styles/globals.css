@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,code {
+    font: 0.75em Gotham-Light,agothic10,'나눔고딕','Nanum Gothic',Verdana,Dotum,AppleGothic,sans-serif;
+    color: #65646a;
+}
