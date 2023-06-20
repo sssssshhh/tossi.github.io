@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="w-full h-3/4 px-14 pt-28 flex flex-col space-y-10">
       <div className="w-full h-96 flex items-center">
-        <div className="w-full h-full bg-center rounded-md bg-no-repeat bg-[length:600px_1000px] bg-[url('/holdingPlate.jpg')]">
+        <div className="w-full h-full bg-center rounded-md bg-no-repeat bg-[length:600px_1000px] bg-[url('../img/holdingPlate.jpg')]">
         </div>
         <div className="w-full flex flex-col items-center px-4">
           <div className="pt-5 text-4xl text-amber-800 font-bold">
