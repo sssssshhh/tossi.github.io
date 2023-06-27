@@ -13,7 +13,7 @@ export default function Header(){
                       src="/logo_top.png"
                       width={130}
                       height={70}
-                      alt="This is flower."
+                      alt="This is Logo."
                     />
               </Link>
             </li>

@@ -1,23 +1,32 @@
+import { useState } from 'react';
+
 export default function Recipes(){
   const Recipes = [
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg"}, 
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"}, 
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},  
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"}, 
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},  
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"} 
   ];
-  const rowCount = Math.ceil(Recipes.length / 3);
+  const ROWCOUNT = Math.ceil(Recipes.length / 3);
   const ROWS = 3;
+
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const handleSelectChange = (event: any) => {
+    const value = event.target.value;
+    setSelectedValue(value);
+  };
 
     return (
       <div className="w-full h-3/4 px-14 pt-28 flex flex-col justify-center items-center space-y-10">
@@ -29,12 +38,21 @@ export default function Recipes(){
             <i className="text-sm">- Julie and Julia</i>
           </div>
         </div>
+        <div className="w-full flex items-center pl-9">
+          <span className="mr-2 font-bold">LEVEL:</span>
+          <select value={selectedValue} onChange={handleSelectChange} className="border border-gray-300 rounded px-2 py-1 border-none">
+            <option value="">All</option>
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
         <div className="flex flex-col space-y-10">
-          {Array(rowCount).fill("").map((_, rowIndex) => (
+          {Array(ROWCOUNT).fill("").map((_, rowIndex) => (
             <div className="flex space-x-10">
               
               {Array(ROWS).fill("").map((_, columnIndex) => {
-                const recipeIndex = rowIndex * 3 + columnIndex;
+                const recipeIndex = rowIndex * ROWS + columnIndex;
 
                 if (recipeIndex < Recipes.length) {
                   const recipe = Recipes[recipeIndex];
@@ -42,6 +60,7 @@ export default function Recipes(){
                   return (
                     <div className="flex flex-col items-center space-y-2 text-amber-800">
                       <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+                      <i className="text-xs text-black self-end">level: {recipe.level}</i>
                       <div className="font-extralight text-xl">{recipe.title}</div>
                       <div className="font-light text-sm">WITH {recipe.ingredient}</div>
                     </div>
