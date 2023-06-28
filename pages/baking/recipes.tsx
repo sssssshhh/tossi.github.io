@@ -1,7 +1,14 @@
 import { useState } from 'react';
 
+interface Recipe {
+  title: string;
+  ingredient: string;
+  img: string;
+  level: string;
+}
+
 export default function Recipes(){
-  const Recipes = [
+  const recipes: Recipe[]  = [
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},
@@ -10,15 +17,16 @@ export default function Recipes(){
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"}, 
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},  
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"},
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"}, 
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"}, 
     {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},  
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"},
-    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "easy"} 
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
+    {"title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"} 
   ];
-  const ROWCOUNT = Math.ceil(Recipes.length / 3);
+
+  const ROWCOUNT = Math.ceil(recipes.length / 3);
   const ROWS = 3;
 
   const [selectedValue, setSelectedValue] = useState('');
@@ -27,6 +35,16 @@ export default function Recipes(){
     const value = event.target.value;
     setSelectedValue(value);
   };
+
+  const filterRecipesByLevel = (): Recipe[] => {
+    if (selectedValue === "") {
+      return recipes;
+    } else {
+      return recipes.filter((recipe) => recipe.level === selectedValue);
+    }
+  };
+
+  const filteredRecipes: Recipe[] = filterRecipesByLevel();
 
     return (
       <div className="w-full h-3/4 px-14 pt-28 flex flex-col justify-center items-center space-y-10">
@@ -40,7 +58,7 @@ export default function Recipes(){
         </div>
         <div className="w-full flex items-center pl-9">
           <span className="mr-2 font-bold">LEVEL:</span>
-          <select value={selectedValue} onChange={handleSelectChange} className="border border-gray-300 rounded px-2 py-1 border-none">
+          <select value={selectedValue} onChange={handleSelectChange} className="border border-gray-300 rounded px-2 py-1 border-none focus:outline-none">
             <option value="">All</option>
             <option value="Easy">Easy</option>
             <option value="Moderate">Moderate</option>
@@ -49,17 +67,16 @@ export default function Recipes(){
         </div>
         <div className="flex flex-col space-y-10">
           {Array(ROWCOUNT).fill("").map((_, rowIndex) => (
-            <div className="flex space-x-10">
+            <div className="flex space-x-10" key={`row-${rowIndex}`}>
               
               {Array(ROWS).fill("").map((_, columnIndex) => {
                 const recipeIndex = rowIndex * ROWS + columnIndex;
-
-                if (recipeIndex < Recipes.length) {
-                  const recipe = Recipes[recipeIndex];
+                if (recipeIndex < filteredRecipes.length) {
+                  const recipe = filteredRecipes[recipeIndex];
 
                   return (
-                    <div className="flex flex-col items-center space-y-2 text-amber-800">
-                      <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+                  <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipeIndex}`}>
+                    <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
                       <i className="text-xs text-black self-end">level: {recipe.level}</i>
                       <div className="font-extralight text-xl">{recipe.title}</div>
                       <div className="font-light text-sm">WITH {recipe.ingredient}</div>
