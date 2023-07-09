@@ -43,7 +43,7 @@ export default function Header(){
               </Link>
             </li>
             <li className="display: inline-block pr-12">
-              <Link href="/baking/academy">
+              <Link href="https://www.instagram.com/tossi.baking" target="_blank">
                 <div className="text-base text-amber-700 hover:text-amber-300">Instagram</div>
               </Link>
             </li>

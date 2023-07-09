@@ -13,15 +13,16 @@ export default function Home() {
           <div className="pt-12 text-base text-amber-700 text-center">
             The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
           </div>
-          <button className="w-28 mx-8 my-10 bg-amber-500 text-white p-3 text-center rounded-lg
-          hover:bg-amber-600 active:bg-amber-600 focus:bg-amber-600">
-            자세히보기
-          </button>
         </div>
       </div>
     </div>
   )
 }
+
+      {/* <button className="w-28 mx-8 my-10 bg-amber-500 text-white p-3 text-center rounded-lg
+          hover:bg-amber-600 active:bg-amber-600 focus:bg-amber-600">
+            자세히보기
+          </button> */}
 {/* <div className='px-10 py-14'>
           <Image
             src="/flower.jpg"
