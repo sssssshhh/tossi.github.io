@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from "next/link";
 
 interface Recipe {
   title: string;
@@ -75,12 +76,14 @@ export default function Recipes(){
                   const recipe = filteredRecipes[recipeIndex];
 
                   return (
-                  <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipeIndex}`}>
-                    <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
-                      <i className="text-xs text-black self-end">level: {recipe.level}</i>
-                      <div className="font-extralight text-xl">{recipe.title}</div>
-                      <div className="font-light text-sm">WITH {recipe.ingredient}</div>
-                    </div>
+                    <Link href={{ pathname: `/baking/${recipeIndex}` }}>                   
+                      <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipeIndex}`}>
+                        <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+                        <i className="text-xs text-black self-end">level: {recipe.level}</i>
+                        <div className="font-extralight text-xl">{recipe.title}</div>
+                        <div className="font-light text-sm">WITH {recipe.ingredient}</div>
+                      </div>
+                    </Link>
                   );
                 }
               })}
