@@ -12,9 +12,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="min-h-screen relative w-full">
       <Header/>
-        <div className="w-full h-2/6 pt-3 px-24">
-          <Component {...pageProps} />
-        </div>
+      <div className="w-full h-4/6 xl:h-2/6 pt-3 px-24">
+        <Component {...pageProps} />
+      </div>
       <Footer/>
     </div>
   )

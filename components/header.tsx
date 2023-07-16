@@ -5,8 +5,8 @@ export default function Header(){
     return (
       <>
         <title>Tossi</title>
-        <main className="fixed w-full h-60 xl:h-28 flex justify-between p-4
-        flex-col items-start xl:flex-row xl:justify-center">
+        <main className="fixed w-full group-hover:h-60 xl:h-28 flex justify-between p-4
+        flex-col items-start xl:flex-row xl:justify-center bg-white group">
           <div className="hover:cursor-pointer">
             <Link legacyBehavior href="/">
               <Image
@@ -18,27 +18,28 @@ export default function Header(){
             </Link>
           </div>
           <ul className="flex flex-col items-center xl:flex-row xl:justify-end w-full pt-3 space-y-1">
-            <li className="inline-block pr-12">
+          {/* <div className="xl:hidden block">🔻</div> */}
+            <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/tossiStory">
                 <div className="text-base text-amber-700 hover:text-amber-300">Tossi Story</div>
               </Link>
             </li>
-            <li className="display: inline-block pr-12">
+            <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/recipes">
                 <div className="text-base text-amber-700 hover:text-amber-300">Recipes</div>
               </Link>
             </li>
-            <li className="display: inline-block pr-12">
+            <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/bakingStory">
                 <div className="text-base text-amber-700 hover:text-amber-300">Baking Story</div>
               </Link>
             </li>
-            <li className="display: inline-block pr-12">
+            <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/bakingJournal">
                 <div className="text-base text-amber-700 hover:text-amber-300">Baking Journal</div>
               </Link>
             </li>
-            <li className="display: inline-block pr-12">
+            <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="https://www.instagram.com/tossi.baking" target="_blank">
                 <div className="text-base text-amber-700 hover:text-amber-300">Instagram</div>
               </Link>
