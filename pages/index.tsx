@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full h-3/4 px-14 pt-28 flex flex-col space-y-10">
+    <main className="w-full h-3/4 px-14 pt-28 flex flex-col space-y-10">
       <div className="w-full h-96 flex items-center">
         <div className="w-full h-full bg-center rounded-md bg-no-repeat bg-[length:600px_1000px] bg-[url('../img/holdingPlate.jpg')]">
         </div>
@@ -15,7 +15,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

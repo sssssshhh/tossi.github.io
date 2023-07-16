@@ -2,12 +2,12 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function Detail() {
-  // const router = useRouter();
+  const router = useRouter();
   // const [id]:any = router.query.params;
 //[...params] // TODO: Temporal
     return (
-      <div className="w-full h-3/4 px-14 pt-28 flex flex-col justify-center items-center space-y-10">
-        <div className="flex flex-col justify-center items-center">
+      <div className="w-full h-[1000px] px-14 pt-28 flex flex-col justify-center items-center space-y-10">
+        <div className="w-[500px] flex flex-col justify-center items-center">
           <div className="text-3xl text-amber-500 pt-10">리치에 감자크림치즈</div>
           <div className="text-base	text-amber-500 pt-2 pb-12">Potato Cream Cheese with Rich Bread</div>
           <div className="border-y-2 text-amber-500 mb-4 py-2">
@@ -15,8 +15,8 @@ export default function Detail() {
             <div>풍미가 조화로운 미니 식빵</div>
           </div>
         </div>
-        <div className="h-96 w-5/6 space-y-4 flex flex-col items-center">
-          <div className="w-20 h-20 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+        <div className="h-96 w-[500px] space-y-4 flex flex-col ">
+          <div className="w-full h-56 bg-[url('../img/victoriaCake_2.jpg')] bg-no-repeat"></div>
           <div className="space-y-2">
             <div className="text-base font-bold text-amber-700">Ingredient</div>
             <ul className="columns-2 space-y-1 text-amber-700">
@@ -28,9 +28,9 @@ export default function Detail() {
               <li>1/4 cup unsweetened applesauce</li>
             </ul>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 border-t-4 border-red-300">
             <div className="text-base font-bold text-amber-700">Recipes</div>
-            <ul className="space-y-2 text-amber-700">
+            <ul className="space-y-6 text-amber-700">
               <li>1. In a large bowl, dissolve yeast in warm milk. Add the sugar, applesauce, egg whites, salt and 2 cups flour; beat until smooth. Stir in enough remaining flour to form a soft dough.</li>
               <li>2. Turn onto a lightly floured surface; knead until smooth and elastic, 6-8 minutes (dough will be slightly sticky). Place in a bowl coated with cooking spray, turning once to coat top. Cover and let rise in a warm place until doubled, about 1 hour.</li>
               <li>3. Turn dough onto a lightly floured surface; divide into 24 pieces. Shape each portion into an 8-in. rope; tie into a knot. </li>
