@@ -1,9 +1,7 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main className="w-full h-3/4 px-14 pt-28 flex flex-col space-y-10">
-      <div className="w-full h-96 flex items-center">
+      <div className="w-full h-96 flex flex-col xl:flex-row items-center">
         <div className="w-full h-full bg-center rounded-md bg-no-repeat bg-[length:600px_1000px] bg-[url('../img/holdingPlate.jpg')]">
         </div>
         <div className="w-full flex flex-col items-center px-4">
@@ -18,19 +16,3 @@ export default function Home() {
     </main>
   )
 }
-
-      {/* <button className="w-28 mx-8 my-10 bg-amber-500 text-white p-3 text-center rounded-lg
-          hover:bg-amber-600 active:bg-amber-600 focus:bg-amber-600">
-            자세히보기
-          </button> */}
-{/* <div className='px-10 py-14'>
-          <Image
-            src="/flower.jpg"
-            width={600}
-            height={500}
-            alt="This is flower."
-          />
-        </div>
-        <div className='w-3/5 px-10 py-14 text-center'>
-          <div className='text-4xl py-10'>안녕하세요, 홀썸 라이프입니다</div>
-        </div> */}

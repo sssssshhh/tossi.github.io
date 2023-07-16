@@ -5,8 +5,8 @@ export default function TossiStory(){
         <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
           <div className="pt-9 text-3xl">Tossi Baking</div>
           <div className="w-4/5 h-80 bg-[url('../img/victoriaCake_2.jpg')]"></div>
-          <div className="h-[500px] pb-10">
-            <h2 className="text-2xl pt-12">About Tossi</h2>
+          <div className="h-4/6 pb-10">
+            <h2 className="text-2xl py-12">About Tossi</h2>
             <p className="text-lg">
               바쁜 일상이 버거운 우리들에게 식빵은 맛있는 쉼표입니다. <br></br>
               갓 구워서 김이 모락모락 나는 식빵 한 쪽에도 우리는 충분히 행복감을 느낄 수 있기 때문이지요.<br></br>
@@ -18,7 +18,7 @@ export default function TossiStory(){
               <span className="text-xl font-bold leading-10	tracking-wide">식빵은 가장 기본이 되면서도 만들기 가장 어려운 빵 중의 하나입니다.</span>
             </p>
             <h2 className="text-2xl pt-12 pb-5">Simply the Best</h2>
-            <p className="text-lg">
+            <p className="text-lg pb-5">
               100% 직영점 운영은 '밀도'의 철저한 맛, 품질관리의 비결입니다.
             </p>
           </div>

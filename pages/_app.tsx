@@ -19,33 +19,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </div>
   )
 }
-
-{/* <div className="h-36 flex flex-col justify-center items-center">
-  <div className="font-bold text-2xl mb-4">Tossi Baking</div>
-</div> */}
-
-{/* <nav>
-<div className='flex'>
-    <Link href='/about'>
-      <div className={router.pathname === '/about' ? 'px-2 underline ' : 'px-2'}>About</div>
-    </Link>
-    <Link href='/baking/ingredient'>
-      <div className={router.pathname === '/baking/ingredient' ? 'px-2 underline' : 'px-2'}>Baking ingredient</div>
-    </Link>
-    <Link href='/baking/journal'>
-      <div className={router.pathname === '/baking/journal' ? 'px-2 underline' : 'px-2'}>Baking journal</div>
-    </Link>
-    <Link href='/baking/recipes'>
-      <div className={router.pathname === '/baking/recipes' ? 'px-2 underline' : 'px-2'}>Recipes</div>
-    </Link>
-    <Link href='/info/contact'>
-      <div className={router.pathname === '/info/contact' ? 'px-2 underline' : 'px-2'}>Contact</div>
-    </Link>
-    <Link href='/info/login'>
-      <div className={router.pathname === '/info/login' ? 'px-2 font-bold' : 'px-2'}>login</div>
-    </Link>
-   </div>
-</nav> */}
-
-// image_zoom_small
-// //mealdo.cafe24.com/web/product/big/201610/38_shop1_101449.jpg
