@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import Link from "next/link";
-
-interface Recipe {
-  id: number,
-  title: string;
-  ingredient: string;
-  img: string;
-  level: string;
-}
+import Recipe from '@/models/Recipe';
 
 export default function Recipes(){
   const recipes: Recipe[]  = [
@@ -66,7 +59,7 @@ export default function Recipes(){
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-3 mt-2 gap-3">
         {filteredRecipes.map((recipe, index) => (
-        <Link href={{ pathname: `/baking/${recipe.id}` }}>                   
+        <Link href={{ pathname: `/baking/recipe/${recipe.id}` }}>                   
           <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipe.id}`}>
             <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
             <i className="text-xs text-black self-end">level: {recipe.level}</i>

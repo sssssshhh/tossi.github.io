@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function Detail() {
@@ -19,7 +18,7 @@ export default function Detail() {
           <div className="w-full h-56 bg-[url('../img/victoriaCake_2.jpg')] bg-no-repeat"></div>
           <div className="space-y-2 py-5">
             <div className="flex flex-col pb-8 items-center text-xl sm:text-2xl font-bold text-amber-700">Ingredient</div>
-            <ul className="grid grid-cols-1 xl:grid-cols-2 gap-1 text-sm text-amber-700">
+            <ul className="grid grid-cols-1 xl:grid-cols-2 gap-1 text-base text-amber-700">
               <li>1 package (1/4 ounce) active dry yeast</li>
               <li>1 cup 2% milk (110° to 115°)</li>
               <li>1/4 cup sugar</li>
