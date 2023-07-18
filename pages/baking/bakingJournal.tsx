@@ -1,5 +1,7 @@
 import Journal from "@/models/Journal";
 import Link from "next/link";
+import Image from "next/image";
+import cookieWithCups from '../../img/cookies_with_cups.jpeg';
 
 export default function BakingJournal(){
     const journals: Journal[]  = [
@@ -29,7 +31,18 @@ export default function BakingJournal(){
         {journals.map((journal, index) => (
         <Link href={{ pathname: `/baking/journal/${journal.id}` }}>                   
           <div className="flex flex-col items-center space-y-2 text-amber-800" key={`journal-${journal.id}`}>
-            <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+            <div className="w-80 h-64 relative z-0">
+              <Image
+                src={cookieWithCups}
+                alt="cookie"
+                priority
+                fill
+                sizes="(min-width: 20px) 20px, 20px"
+                style={{
+                  objectFit: 'contain',
+                }}
+              />
+            </div>
             <div className="w-80 pt-1 text-base sm:text-xl font-extralight text-center">{journal.title}</div>
           </div>
         </Link>

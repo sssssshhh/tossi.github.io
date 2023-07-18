@@ -1,6 +1,8 @@
 
 import Story from "@/models/Story";
 import Link from "next/link";
+import Image from "next/image";
+import cookieWithCups from '../../img/cookies_with_cups.jpeg';
 
 export default function BakingStory(){
     const storys: Story[]  = [
@@ -36,7 +38,18 @@ export default function BakingStory(){
         {storys.map((story, index) => (
         <Link href={{ pathname: `/baking/story/${story.id}` }}>                   
           <div className="flex flex-col items-center space-y-2 text-amber-800" key={`journal-${story.id}`}>
-            <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+            <div className="w-80 h-64 relative z-0">
+              <Image
+                src={cookieWithCups}
+                alt="cookie"
+                priority
+                fill
+                sizes="(min-width: 20px) 20px, 20px"
+                style={{
+                  objectFit: 'contain',
+                }}
+              />
+            </div>            
             <div className="w-80 pt-1 text-base sm:text-xl font-extralight text-center">{story.title}</div>
           </div>
         </Link>

@@ -1,24 +1,26 @@
 import { useState } from 'react';
 import Link from "next/link";
 import Recipe from '@/models/Recipe';
+import Image from "next/image";
+import cookieWithCups from '../../img/cookies_with_cups.jpeg';
 
 export default function Recipes(){
   const recipes: Recipe[]  = [
-    {"id": 0, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
-    {"id": 1, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
-    {"id": 2, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},
-    {"id": 3, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
-    {"id": 4, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
-    {"id": 5, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Moderate"},
-    {"id": 6, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},
-    {"id": 7, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"}, 
-    {"id": 8, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
-    {"id": 9, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},  
-    {"id": 10, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
-    {"id": 11, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"}, 
-    {"id": 12, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Advanced"},  
-    {"id": 13, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"},
-    {"id": 14, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../img/victoriaCake_2.jpg", "level": "Easy"} 
+    {"id": 0, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/cookies_with_cups.jpeg", "level": "Easy"},
+    {"id": 1, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"id": 2, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Advanced"},
+    {"id": 3, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"id": 4, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"id": 5, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Moderate"},
+    {"id": 6, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Advanced"},
+    {"id": 7, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Advanced"}, 
+    {"id": 8, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Easy"},
+    {"id": 9, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Advanced"},  
+    {"id": 10, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Easy"},
+    {"id": 11, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Easy"}, 
+    {"id": 12, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Advanced"},  
+    {"id": 13, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Easy"},
+    {"id": 14, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "../../img/victoriaCake_2.jpg", "level": "Easy"} 
   ];
 
   const [selectedValue, setSelectedValue] = useState("");
@@ -61,7 +63,18 @@ export default function Recipes(){
         {filteredRecipes.map((recipe, index) => (
         <Link href={{ pathname: `/baking/recipe/${recipe.id}` }}>                   
           <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipe.id}`}>
-            <div className="w-80 h-64 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+            <div className="w-80 h-64 relative z-0">
+              <Image
+                src={cookieWithCups}
+                alt="cookie"
+                priority
+                fill
+                sizes="(min-width: 20px) 20px, 20px"
+                style={{
+                  objectFit: 'contain',
+                }}
+              />
+            </div>
             <i className="text-xs text-black self-end">level: {recipe.level}</i>
             <div className="text-base sm:text-xl font-extralight ">{recipe.title}</div>
             <div className="text-xs sm:text-sm font-light">WITH {recipe.ingredient}</div>

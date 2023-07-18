@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
+import cookieWithCups from '../../../img/cookies_with_cups.jpeg';
 
 export default function Detail() {
   const router = useRouter();
@@ -14,8 +16,16 @@ export default function Detail() {
             <div>풍미가 조화로운 미니 식빵</div>
           </div>
         </div>
-        <div className="w-[500px] h-3/4 space-y-4 flex flex-col pb-10">
-          <div className="w-full h-56 bg-[url('../img/victoriaCake_2.jpg')] bg-no-repeat"></div>
+        <div className="w-[500px] h-3/4 space-y-4 flex flex-col pb-10">   
+            <Image
+              src={cookieWithCups}
+              alt="cookie"
+              priority
+              style={{
+                width: '100%',
+                height: '400px',
+              }}
+            />
           <div className="space-y-2 py-5">
             <div className="flex flex-col pb-8 items-center text-xl sm:text-2xl font-bold text-amber-700">Ingredient</div>
             <ul className="grid grid-cols-1 xl:grid-cols-2 gap-1 text-base text-amber-700">

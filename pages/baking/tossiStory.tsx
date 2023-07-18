@@ -1,10 +1,21 @@
 import Image from "next/image";
+import cookieWithCups from '../../img/cookies_with_cups.jpeg';
 
 export default function TossiStory(){
     return (
         <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
-          <div className="pt-9 text-3xl">Tossi Baking</div>
-          <div className="w-4/5 h-80 bg-[url('../img/victoriaCake_2.jpg')]"></div>
+          <div className="pt-9 text-3xl text-amber-700">Tossi Baking</div>
+          <div>
+            <Image
+              src={cookieWithCups}
+              alt="cookie"
+              priority
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
           <div className="h-4/6 pb-10">
             <h2 className="text-2xl py-12">About Tossi</h2>
             <p className="text-lg">

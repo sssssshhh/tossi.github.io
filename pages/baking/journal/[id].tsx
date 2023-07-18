@@ -1,3 +1,6 @@
+import Image from "next/image";
+import cookieWithCups from '../../../img/cookies_with_cups.jpeg';
+
 export default function Detail() {
     return (
       <div className="w-full h-full px-14 py-28 flex flex-col justify-center items-center space-y-10">
@@ -7,7 +10,17 @@ export default function Detail() {
             <div className="text-xl text-amber-700">빵에 설탕, 많이 들어가야 하는 이유는 무엇일까?</div>
         </div>
         <div className="w-full h-3/4 space-y-4 flex flex-col pb-10">
-          <div className="w-full h-96 bg-[url('../img/victoriaCake_2.jpg')] bg-no-repeat"></div>
+          <div className="w-full h-96 flex flex-col justify-center items-center">
+            <Image
+              src={cookieWithCups}
+              alt="cookie"
+              priority
+              style={{
+                width: '80%',
+                height: '400px',
+              }}
+            />
+          </div>
         </div>
         <div className="w-3/4 h-3/4 space-y-4 border-t-2 p-20 text-base tracking-wide leading-relaxed">
           <p className="py-5">

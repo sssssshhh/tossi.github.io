@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Header(){
     return (
       <>
-        <title>Tossi</title>
+        <title>TOSSI</title>
         <main className="fixed w-full group-hover:h-60 xl:h-28 flex justify-between p-4
-        flex-col items-start xl:flex-row xl:justify-center bg-white group">
+        flex-col items-start xl:flex-row xl:justify-center bg-white group z-10">
           <div className="hover:cursor-pointer">
             <Link legacyBehavior href="/">
               <Image
@@ -18,7 +18,6 @@ export default function Header(){
             </Link>
           </div>
           <ul className="flex flex-col items-center xl:flex-row xl:justify-end w-full pt-3 space-y-1">
-          {/* <div className="xl:hidden block">🔻</div> */}
             <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/tossiStory">
                 <div className="text-base text-amber-700 hover:text-amber-300">Tossi Story</div>
