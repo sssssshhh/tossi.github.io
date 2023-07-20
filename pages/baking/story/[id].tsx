@@ -1,5 +1,4 @@
 import Image from "next/image";
-import cookieWithCups from '../../../img/cookies_with_cups.jpeg';
 
 export default function Detail() {
   return (
@@ -11,13 +10,11 @@ export default function Detail() {
       </div>
       <div className="w-full h-3/4 space-y-4 flex flex-col pb-10 justify-center items-center">
         <Image
-          src={cookieWithCups}
+          src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg"
           alt="cookie"
           priority
-          style={{
-            width: '80%',
-            height: '400px',
-          }}
+          width={700}
+          height={400}
         />
       </div>
       <div className="w-3/4 h-3/4 space-y-4 border-t-2 p-20 text-base tracking-wide leading-relaxed">

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import cookieWithCups from '../../img/cookies_with_cups.jpeg';
 
 export default function TossiStory(){
     return (
@@ -7,13 +6,11 @@ export default function TossiStory(){
           <div className="pt-9 text-3xl text-amber-700">Tossi Baking</div>
           <div>
             <Image
-              src={cookieWithCups}
+              src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/chopstick.jpeg"
               alt="cookie"
               priority
-              style={{
-                width: '100%',
-                height: '100%',
-              }}
+              width={400}
+              height={400}
             />
           </div>
           <div className="h-4/6 pb-10">

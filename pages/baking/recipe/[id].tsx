@@ -1,11 +1,8 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
-import cookieWithCups from '../../../img/cookies_with_cups.jpeg';
 
 export default function Detail() {
   const router = useRouter();
-  // const [id]:any = router.query.params;
-//[...params] // TODO: Temporal
     return (
       <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
         <div className="w-[500px] h-1/4 flex flex-col justify-center items-center">
@@ -18,13 +15,11 @@ export default function Detail() {
         </div>
         <div className="w-[500px] h-3/4 space-y-4 flex flex-col pb-10">   
             <Image
-              src={cookieWithCups}
+              src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg"
               alt="cookie"
               priority
-              style={{
-                width: '100%',
-                height: '400px',
-              }}
+              width={500}
+              height={400}
             />
           <div className="space-y-2 py-5">
             <div className="flex flex-col pb-8 items-center text-xl sm:text-2xl font-bold text-amber-700">Ingredient</div>
