@@ -1,5 +1,4 @@
 import Image from "next/image";
-import holdingPlate from '../img/holdingPlate.jpg';
 
 export default function Home() {
   return (
@@ -13,10 +12,11 @@ export default function Home() {
           />
         <div className="w-full flex flex-col items-center px-4">
           <div className="pt-5 text-4xl text-amber-800 font-bold">
-            Welcome to Tossi
+            Tossi
           </div>
-          <div className="pt-12 text-xl text-amber-700 text-center">
-            The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
+          <div className="pt-12 text-base/loose text-amber-700 text-center">
+            <p>‘토씨’의 To(토)는 땅을 구성하는 흙(土)에 생명의 근원인 씨앗의 ‘씨’를 더한 의미입니다.
+            ‘토씨’는 우리 몸과 마음을 아름답게 가꾸는 씨앗이 되는 삶을 선물합니다.</p>
           </div>
         </div>
       </div>

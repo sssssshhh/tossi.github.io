@@ -5,21 +5,24 @@ import Image from "next/image";
 
 export default function Recipes(){
   const recipes: Recipe[]  = [
-    {"id": 0, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
-    {"id": 1, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
-    {"id": 2, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},
-    {"id": 3, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
-    {"id": 4, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
-    {"id": 5, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
-    {"id": 6, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},
-    {"id": 7, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"}, 
-    {"id": 8, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
-    {"id": 9, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},  
-    {"id": 10, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
-    {"id": 11, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"}, 
-    {"id": 12, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},  
-    {"id": 13, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
-    {"id": 14, "title": "STRAWBERRY CAKE", "ingredient":"CONFECTIONER'S SUGAR", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"} 
+    {"id": 0, "title": "비건 초콜릿 코코넛 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
+    {"id": 1, "title": "비건 글루텐 프리  오트밀 초콜릿 칩 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
+    {"id": 2, "title": "비건 글루텐 프리 그래놀라 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},
+    {"id": 3, "title": "비건 더블 로투스 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
+    {"id": 4, "title": "비건 오레오 청크 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
+    {"id": 5, "title": "비건 라즈베리 콩포트 초콜릿 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Moderate"},
+    {"id": 6, "title": "비건 초코 크랙 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},
+    {"id": 7, "title": "비건 피넛 버터 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"}, 
+    {"id": 8, "title": "라즈베리 화이트 초콜릿 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
+    {"id": 9, "title": "비건 르뱅 쿠키", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},  
+    {"id": 10, "title": "비건 초코 케이크 스콘", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
+    {"id": 11, "title": "비건 글루텐 프리 비건 코코넛 스콘", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"}, 
+    {"id": 12, "title": "비건 글루텐 프리 바나나 블루베리 스콘", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Advanced"},  
+    {"id": 13, "title": "비건 글루텐 프리 초코칩 스콘", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
+    {"id": 14, "title": "비건 글루텐 프리 블루베리 머핀", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
+    {"id": 15, "title": "비건 글루텐 프리 라즈베리 머핀", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"},
+    {"id": 16, "title": "비건 글루텐 프리 바나나 초콜릿 머핀", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"}, 
+    {"id": 17, "title": "비건 클래식 비스킷", "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg", "level": "Easy"} 
   ];
 
   const [selectedValue, setSelectedValue] = useState("");
@@ -75,7 +78,6 @@ export default function Recipes(){
             </div>
             <i className="text-xs text-black self-end">level: {recipe.level}</i>
             <div className="text-base sm:text-xl font-extralight ">{recipe.title}</div>
-            <div className="text-xs sm:text-sm font-light">WITH {recipe.ingredient}</div>
           </div>
         </Link>
           ))}

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function TossiStory(){
     return (
         <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
-          <div className="pt-9 text-3xl text-amber-700">Tossi Baking</div>
+          <div className="pt-9 text-3xl text-amber-700">About Tossi</div>
           <div>
             <Image
               src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/chopstick.jpeg"
@@ -13,22 +13,33 @@ export default function TossiStory(){
               height={400}
             />
           </div>
-          <div className="h-4/6 pb-10">
+          <div className="h-5/6 pb-20 text-lg">
             <h2 className="text-2xl py-12">About Tossi</h2>
-            <p className="text-lg">
-              바쁜 일상이 버거운 우리들에게 식빵은 맛있는 쉼표입니다. <br></br>
-              갓 구워서 김이 모락모락 나는 식빵 한 쪽에도 우리는 충분히 행복감을 느낄 수 있기 때문이지요.<br></br>
-              meal°(밀도)는 ‘식빵’이라는 단어가 주는 느낌처럼 소박하고 담백하지만 단단함이 느껴지는 식빵 전문 베이커리입니다.
-              <br></br>
-              <br></br>
-              meal°(밀도)의 meal(밀)은 식사, 끼니를 뜻하기도 하고 매일 먹을 수 있는 식빵의 기본재료인 ‘밀’의 발음이기도 합니다.<br></br>
-              여기에 매일 온도, 습도의 ‘도’를 더하여 작은 차이까지 세심하게 고려하여 만드는 식빵을 의미합니다.<br></br>
-              <span className="text-xl font-bold leading-10	tracking-wide">식빵은 가장 기본이 되면서도 만들기 가장 어려운 빵 중의 하나입니다.</span>
+            <p>
+              갓 구워 김이 모락모락 나는 빵 <br></br>
+              노릇하게 구운 빵 자르는 소리<br></br>
+              고소한 커피 볶는 향기<br></br>
+              우리의 일상을 편안하게 하는 순간입니다.<br></br>
+              <span className="text-xl font-bold leading-10	tracking-wide">토씨는 일상의 편안함으로 몸과 마음을 채우고 가꿀 수 있는 베이킹 라이프를 전합니다.</span>
             </p>
-            <h2 className="text-2xl pt-12 pb-5">Simply the Best</h2>
-            <p className="text-lg pb-5">
-              100% 직영점 운영은 '밀도'의 철저한 맛, 품질관리의 비결입니다.
+            <p>
+              토씨는 우리 몸과 마음을 아름답게 가꾸는 씨앗이 되는 삶을 만들기 위해<br></br>
+              땅을 구성하는 흙과 생명의 근원인 씨앗의 소중함을 기억하겠습니다. <br></br>
+              씨앗이 되는 삶을 선물합니다.
             </p>
+            <p>
+              갓 구워 김이 모락모락 나는 빵 <br></br>
+              노릇하게 구운 빵 자르는 소리<br></br>
+              고소한 커피 볶는 향기<br></br>
+              우리의 일상을 편안하게 하는 순간입니다.<br></br>
+              <span className="text-xl font-bold leading-10	tracking-wide">토씨는 일상의 편안함으로 몸과 마음을 채우고 가꿀 수 있는 베이킹 라이프를 전합니다.</span>
+            </p>
+            <p>
+            'Tossi' combines the meaning of 'To' (土), representing the earth that forms the ground, and 'ssi' (씨), representing seeds, the source of life.<br></br>
+            Tossi shows us that life starts from a seed and gives life to our body and mind.<br></br>
+            In our everyday life, we enjoy the scent of freshly baked bread; the sound of bread being sliced mixed with the aroma of coffee being served.
+            </p>
+            <span className="text-xl font-bold leading-10	tracking-wide">Experience the comfort of baked goods from Tossi where all of our ingredients are sourced from nature and our bakery is a part of your daily life.</span>
           </div>
         </div>
     )

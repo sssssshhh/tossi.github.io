@@ -9,12 +9,7 @@ export default function Header(){
         flex-col items-start xl:flex-row xl:justify-center bg-white group z-10">
           <div className="hover:cursor-pointer">
             <Link legacyBehavior href="/">
-              <Image
-                    src="/logo_top.png"
-                    width={130}
-                    height={70}
-                    alt="This is Logo."
-                  />
+              <div className="text-2xl text-amber-700 font-bold pl-5">TOSSI</div>
             </Link>
           </div>
           <ul className="flex flex-col items-center xl:flex-row xl:justify-end w-full pt-3 space-y-1">
