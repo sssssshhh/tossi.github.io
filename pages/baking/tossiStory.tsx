@@ -15,7 +15,7 @@ export default function TossiStory(){
           </div>
           <div className="h-5/6 pb-20 text-lg">
             <h2 className="text-2xl py-12">About Tossi</h2>
-            <p>
+            <p className="pb-10">
               갓 구워 김이 모락모락 나는 빵 <br></br>
               노릇하게 구운 빵 자르는 소리<br></br>
               고소한 커피 볶는 향기<br></br>
@@ -27,7 +27,7 @@ export default function TossiStory(){
               땅을 구성하는 흙과 생명의 근원인 씨앗의 소중함을 기억하겠습니다. <br></br>
               씨앗이 되는 삶을 선물합니다.
             </p>
-            <p>
+            <p className="pb-10">
               갓 구워 김이 모락모락 나는 빵 <br></br>
               노릇하게 구운 빵 자르는 소리<br></br>
               고소한 커피 볶는 향기<br></br>
