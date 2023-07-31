@@ -1,9 +1,13 @@
+import { Level } from "@/enum/level";
+
 export default interface RecipeDetail {
-    id: number,
-    intro: string,
-    time: string,
+    id: number;
     title: string;
+    level: Level;
+    intro: string;
+    result: string;
+    ingredient: string;
     explanation: string;
-    img: string,
-    ingredient: string
+    img: string;
+    tip?:string;
 }
