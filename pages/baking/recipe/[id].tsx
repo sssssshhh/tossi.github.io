@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import RecipeDetail from "@/models/RecipeDetail";
 import { Level } from "@/enum/level";
-import { recipes } from "./recipes";
+// import { recipes } from "./recipes";
 
 export default function Detail() {
 const recipe: RecipeDetail =     
@@ -17,12 +17,10 @@ const recipe: RecipeDetail =
   "img": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/cookies2.jpeg",
 };
 
-// const recipe = recipes.find(recipe => recipe.id === Number(useRouter().query.id))
-
   const router = useRouter();
 
   console.log(useRouter().query.id)
-    // TODO: Add spilit rule of !! ? 
+
     const sentenceDelimiters = /[.!?]/;
     const sentences = recipe.intro.split(sentenceDelimiters);
     const introSentences = sentences.filter((sentence) => sentence.trim() !== "");
