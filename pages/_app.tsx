@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen relative w-full">
+    <div className="w-full min-h-screen relative">
       <Header/>
       <div className="w-full h-4/6 xl:h-2/6 pt-3 px-24">
         <Component {...pageProps} />
