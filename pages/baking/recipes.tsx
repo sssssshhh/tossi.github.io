@@ -84,4 +84,5 @@ export default function Recipes(){
               {/** TODO: paging */}
         </div>
       </div>
-    )}
+    )
+  }

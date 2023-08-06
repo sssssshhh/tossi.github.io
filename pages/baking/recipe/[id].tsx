@@ -224,7 +224,8 @@ export default function Detail() {
               alt="This is recipe"
               priority
               width={500}
-              height={400} />
+              height={400} 
+              />
             <div className="space-y-2 py-5">
               <ul className="grid grid-cols-1 xl:grid-cols-2 gap-1 text-base text-amber-700">
                 {ingredients.map((ingredient, index) => (
