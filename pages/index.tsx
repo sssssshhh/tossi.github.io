@@ -1,6 +1,23 @@
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const response = await fetch('/api/notion');
+          const responseData = await response.json();
+          console.log(responseData)
+          setData(responseData);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
+      fetchData();
+    }, []);
+
   return (
     <main className="w-full h-full px-3 md:px-14 pt-28 flex flex-col space-y-10">
       <div className="w-full h-3/4 pb-10 lg:pb-0 flex flex-col xl:flex-row items-center">
@@ -27,3 +44,4 @@ export default function Home() {
     </main>
   )
 }
+
