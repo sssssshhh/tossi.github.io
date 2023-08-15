@@ -24,12 +24,12 @@ export default function Header(){
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block">
-              <Link href="/baking/bakingStory">
+              <Link href="/baking/story">
                 <div className="text-base text-amber-700 hover:text-amber-300">Baking Story</div>
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block">
-              <Link href="/baking/bakingJournal">
+              <Link href="/baking/journal">
                 <div className="text-base text-amber-700 hover:text-amber-300">Baking Journal</div>
               </Link>
             </li>
