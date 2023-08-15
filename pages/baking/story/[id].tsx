@@ -27,6 +27,7 @@ export default function Detail() {
       <div className="w-full h-3/4 space-y-4 flex flex-col pb-10 justify-center items-center">
         <Image
           src={story.img}
+          key={story.img}
           alt="This is story"
           priority
           width={700}

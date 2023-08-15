@@ -1,9 +1,11 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
-  const notionApiUrl = `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}`;
+  const notionApiUrl = `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`;
+  const notionApiUrlpage = `https://api.notion.com/v1/pages/aa90b0fd-84a8-4949-b41c-1af1efacd355/query`;
+  const notionApiUrlblock = `https://api.notion.com/v1/blocks/aa90b0fd-84a8-4949-b41c-1af1efacd355/children?page_size=100`;
 
-  const response = await fetch(notionApiUrl, {
+  const response = await fetch(notionApiUrlblock, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${process.env.NEXT_PUBLIC_NOTION_KEY}`,
