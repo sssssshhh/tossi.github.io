@@ -7,6 +7,7 @@ interface RichTextRendererProps {
 }
 
 const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => {
+  console.log(richTextData)
   const convertRichTextToHTML = (richText: string[]):{
     text: string,
     className: string;
@@ -30,9 +31,10 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
     return {"text": text, "className": "py-6 text-3xl text-amber-700"};
   };
 
-  const richData = convertRichTextToHTML(richTextData.rich_text);
+  const richData = convertRichTextToHTML(richTextData?.rich_text);
   console.log('richData:', richData.text)
   const testss = "py-6 text-3xl text-amber-700";
+  
   return <div className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} />;
 };
 

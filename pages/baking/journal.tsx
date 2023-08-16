@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Journal from "@/models/Journal";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function Journal(){
   const [journals, setJournals] = useState<Journal[]>([]);
@@ -37,12 +37,11 @@ export default function Journal(){
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 mt-2 gap-3">
       {journals.map((journal, index) => (
-      <Link href={{ pathname: `/baking/journal/${journal.id}` }}>                   
-        <div className="flex flex-col items-center space-y-2 text-amber-800" key={`journal-${journal.id}`}>
+      <Link key={index} href={{ pathname: `/baking/journal/${journal.id}` }}>                   
+        <div className="flex flex-col items-center space-y-2 text-amber-800">
           <div className="w-80 h-64 relative z-0">
             <Image
               src={journal.img}
-              key={index}
               alt="cookie"
               priority
               fill

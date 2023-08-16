@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import RecipeDetail from "@/models/RecipeDetail";
-import { Level } from "@/enum/level";
 
 export default function Detail() {
 //   {
@@ -198,7 +197,7 @@ export default function Detail() {
     recipeDetail => recipeDetail.id.toString() === useRouter().query.id)[0]; 
   
   const sentenceDelimiters = /[.!?]/;
-  const sentences = recipe.intro.split(sentenceDelimiters);
+  const sentences = recipe?.intro.split(sentenceDelimiters);
   const introSentences = sentences.filter((sentence) => sentence.trim() !== "");
   const ingredients = recipe.ingredient.split(',');
   // TODO: /\d+\.\s/ ? 
@@ -207,7 +206,7 @@ export default function Detail() {
     return (  
       <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
         <div className="w-[500px] h-1/4 flex flex-col justify-center items-center">
-          <div className="text-3xl text-amber-700 pt-10 pb-12">{recipe.title}
+          <div className="text-3xl text-amber-700 pt-10 pb-12">{recipe?.title}
           </div>
           <div className="border-y-2 text-amber-600 mb-4 py-2">
             {introSentences.map((sentence, index) => (
