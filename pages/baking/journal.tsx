@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Image from "next/image";
 import Journal from "@/models/Journal";
@@ -10,10 +9,14 @@ export default function Journal(){
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/api/notionDB');
+        const response = await fetch('/api/DB/bakingJournal');
         const responseData = await response.json();
-
-        const updatedJournals = responseData.results.map(result => ({
+        const updatedJournals = responseData.results
+        .filter((result: any) => (
+          result.properties.title.title[0]?.plain_text && result.properties.image.url
+        ))
+        .map((result: any) => (
+          {
           id: result.id,
           title: result.properties.title.title[0].plain_text,
           img: result.properties.image.url,
@@ -24,7 +27,6 @@ export default function Journal(){
         console.error('Error fetching data:', error);
       }
     }
-
     fetchData();
   }, []);
 
@@ -60,19 +62,3 @@ export default function Journal(){
     </div>
   )
 }
-
-// const [data, setData] = useState({});
-
-// useEffect(() => {
-//   async function fetchData() {
-//     try {
-//       const response = await fetch('/api/notion');
-//       const responseData = await response.json();
-//       console.log(responseData.results)
-//       setData(responseData);
-//     } catch (error) {
-//       console.error('Error fetching data:', error);
-//     }
-//   }
-//   fetchData();
-// }, []);

@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
-  const notionApiUrl = `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`;
+  const notionApiUrl = `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DB_JOURNAL_ID}/query`;
 
   const response = await fetch(notionApiUrl, {
     method: 'POST',
