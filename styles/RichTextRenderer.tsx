@@ -7,12 +7,12 @@ interface RichTextRendererProps {
 }
 
 const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => {
-  console.log(richTextData)
   const convertRichTextToHTML = (richText: string[]):{
     text: string,
     className: string;
   } => {
-    let text = '';
+    let text = richTextData.paragraph.rich_text[0].text.content;
+    let className = "";
 
     // richText.forEach((element: any) => {
     //   if (element.type === 'text') {
@@ -26,16 +26,14 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
     //     html += `<span style="${textStyle}">${textContent}</span>`;
     //   }
     // });
-    text = 'tessssst';
 
-    return {"text": text, "className": "py-6 text-3xl text-amber-700"};
+    return {"text": text, "className": className};
   };
 
-  const richData = convertRichTextToHTML(richTextData?.rich_text);
-  console.log('richData:', richData.text)
-  const testss = "py-6 text-3xl text-amber-700";
-  
-  return <div className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} />;
+  const richData = convertRichTextToHTML(richTextData);
+  // const testss = "py-6 text-3xl text-amber-700";
+  console.log(richData.text)
+  return <p className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} />;
 };
 
 export default RichTextRenderer;
