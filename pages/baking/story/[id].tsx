@@ -43,20 +43,20 @@ export default function Detail() {
       </div>
       <div className="h-5/6 pb-20 text-base tracking-wide leading-8">
         {blocks.map((block, index) => (
-        <>
-          {block.type === "image" ?
-          <div className="pb-10 flex flex-col justify-center items-center">
-            <Image
-              src={block.image.external.url}
-              alt="This is story"
-              priority
-              width={700}
-              height={400}
-            /> 
+          <div key={index}>
+            {block.type === "image" ?
+            <div className="pb-10 flex flex-col justify-center items-center">
+              <Image
+                src={block.image.external.url}
+                alt="This is story"
+                priority
+                width={700}
+                height={400}
+              /> 
+            </div>
+          : 
+            <RichTextRenderer key={index} richTextData={block} /> }
           </div>
-        : 
-          <RichTextRenderer key={index} richTextData={block} /> }
-        </>
         ))}
       </div>
     </div>

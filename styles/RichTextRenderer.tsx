@@ -1,6 +1,5 @@
 
 import React from 'react';
-import styles from './YourComponentStyles.module.css';
 
 interface RichTextRendererProps {
   richTextData: any;
@@ -11,24 +10,25 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
     text: string,
     className: string;
   } => {
+    let richData = {"text": "", "className": ""};
     if(richTextData.numbered_list_item){
       let text = richTextData.numbered_list_item.rich_text[0].text.content;
-      return {"text": text, "className": ""};
-    }
-
-    if(richTextData.paragraph.rich_text.length > 0) {
+      
+      richData = {"text": text, "className": ""};
+    } else if(richTextData.paragraph.rich_text.length > 0) {
       let text = richTextData.paragraph.rich_text[0].text.content;
       let className = "";
   
-      return {"text": text, "className": className};
-    } else {
-      return {"text": "", "className": ""};
-    }
-
+      richData = {"text": text, "className": className};
+    } 
+    return richData;
   };
 
   const richData = convertRichTextToHTML(richTextData);
-  return <p className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} />;
+
+  return richData.text ? 
+  <p className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} /> 
+  : <br></br>
 };
 
 export default RichTextRenderer;
