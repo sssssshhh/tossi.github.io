@@ -11,28 +11,23 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
     text: string,
     className: string;
   } => {
-    let text = richTextData.paragraph.rich_text[0].text.content;
-    let className = "";
+    if(richTextData.numbered_list_item){
+      let text = richTextData.numbered_list_item.rich_text[0].text.content;
+      return {"text": text, "className": ""};
+    }
 
-    // richText.forEach((element: any) => {
-    //   if (element.type === 'text') {
-    //     let textStyle = '';
-    //     if (element.annotations.bold) {
-    //       textStyle += 'font-weight: bold;';
-    //     }
-    //     // Add styles for italic, strikethrough, underline, etc.
+    if(richTextData.paragraph.rich_text.length > 0) {
+      let text = richTextData.paragraph.rich_text[0].text.content;
+      let className = "";
+  
+      return {"text": text, "className": className};
+    } else {
+      return {"text": "", "className": ""};
+    }
 
-    //     const textContent = element.text.content;
-    //     html += `<span style="${textStyle}">${textContent}</span>`;
-    //   }
-    // });
-
-    return {"text": text, "className": className};
   };
 
   const richData = convertRichTextToHTML(richTextData);
-  // const testss = "py-6 text-3xl text-amber-700";
-  console.log(richData.text)
   return <p className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} />;
 };
 

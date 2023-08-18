@@ -38,7 +38,7 @@ export default function Detail() {
 
   return (
     <div className="w-full h-full px-14 py-28 flex flex-col justify-center items-center space-y-10">
-      <div id="test" className="h-1/4 text-3xl flex flex-col justify-center items-center text-center space-y-3">
+      <div className="h-1/4 text-3xl flex flex-col justify-center items-center text-center space-y-3">
         {title}
       </div>
       <div className="h-5/6 pb-20 text-base tracking-wide leading-8">
