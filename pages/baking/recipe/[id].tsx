@@ -1,7 +1,6 @@
 import Image from "next/image";
-import RecipeDetail from "@/models/RecipeDetail";
 import { useRouter } from "next/router";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import RichTextRenderer from "@/styles/RichTextRenderer";
 
 export default function Detail() {
