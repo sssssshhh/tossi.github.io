@@ -9,7 +9,7 @@ export default function Recipes(){
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/api/DB/recipe');
+        const response = await fetch('/api/recipe');
         const responseData = await response.json();
 
         const updatedRecipes = responseData.results
