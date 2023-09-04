@@ -1,16 +1,14 @@
-/** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
-    remotePatterns: [
+
+  async rewrites() {
+    return [
       {
-        protocol: 'https',
-        hostname: 'tossibaking.s3.ap-northeast-2.amazonaws.com',
-        port: '',
-        pathname: '/**',
+        source: '/api/movies',
+        destination: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.API_KEY}&language=en-US`,
       },
-    ],
+    ]
   },
 }
 
