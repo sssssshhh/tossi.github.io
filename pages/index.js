@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import Router from "next/router";
 
 export default function Home({results}) {
