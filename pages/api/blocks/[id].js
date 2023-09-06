@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     const response = await fetch(notionApiUrlblock, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_NOTION_KEY}`,
+        'Authorization': `Bearer secret_fWFtpdlz4LYHtsPSu09EladKSiPfFQkK8LkuDyguZJj`,
         'Notion-Version': '2022-06-28',
       },
     });
