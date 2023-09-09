@@ -7,7 +7,7 @@ export default function Detail() {
   const router = useRouter();
   const [blocks, setBlocks] = useState<any[]>([]);
   const [title, setTitle] = useState("");
-  const myData = [
+  const myData2 = [
     {
         "title": "빵을 먹으면 몸에 안 좋을까요?",
         "object": "list",
@@ -2312,9 +2312,13 @@ export default function Detail() {
         // const response = await fetch(`/api/pages/${router.query.id}`);
         // const responseData = await response.json();
 
-        const responseData2 = myData.find(result => 
-            result.results[0].parent.page_id = String(router.query.id)
+        const responseData2 = myData2.find(result => 
+            result.results[0].parent.page_id === String(router.query.id)
           );
+          myData2.forEach(result => 
+            console.log(result.results[0].parent.page_id, " ", String(router.query.id))
+          );
+          console.log(responseData2);
 
         if(responseData2) {
             setTitle(responseData2.title);

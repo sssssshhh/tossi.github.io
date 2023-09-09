@@ -364,7 +364,7 @@ export default function Story(){
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 mt-2 gap-3">
       {storys.map((story, index) => (
-      <Link key={index} href={{ pathname: `/baking/journal/${story.id}` }}>                   
+      <Link key={index} href={{ pathname: `/baking/story/${story.id}` }}>                   
         <div className="flex flex-col items-center space-y-2 text-amber-800">
           <div className="w-80 h-64 relative z-0">
             <Image

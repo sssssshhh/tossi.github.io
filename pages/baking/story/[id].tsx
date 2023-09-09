@@ -1,13 +1,13 @@
 import RichTextRenderer from "@/styles/RichTextRenderer";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export default function Detail() {
   const router = useRouter();
   const [blocks, setBlocks] = useState<any[]>([]);
   const [title, setTitle] = useState("");
-  const myData = [
+  const myData3 = [
     {
         "title":"카카오? 코코아?",
         "object": "list",
@@ -1311,7 +1311,7 @@ export default function Detail() {
         "type": "block",
         "block": {}
     }
-]
+];
 
   useEffect(() => {
     async function fetchData() {
@@ -1319,13 +1319,17 @@ export default function Detail() {
         // const response = await fetch(`/api/pages/${router.query.id}`);
         // const responseData = await response.json();
 
-        const responseData2 = myData.find(result => 
-          result.results[0].parent.page_id = String(router.query.id)
-        );
+        const responseData2 = myData3.find(result => 
+            result.results[0].parent.page_id === String(router.query.id)
+          );
+          myData3.forEach(result => 
+            console.log(result.results[0].parent.page_id, " ", String(router.query.id))
+          );
+          console.log(responseData2);
 
         if(responseData2) {
-          setTitle(responseData2.title);
-          setBlocks(responseData2.results);
+            setTitle(responseData2.title);
+            setBlocks(responseData2.results);
         }
       } catch (error) {
         console.error('Error fetching title data:', error);
@@ -1355,20 +1359,20 @@ export default function Detail() {
       </div>
       <div className="h-5/6 pb-20 text-base tracking-wide leading-8">
         {blocks.map((block, index) => (
-          <div key={index}>
-            {block.type === "image" ?
-            <div className="pb-10 flex flex-col justify-center items-center">
-              <Image
-                src={block.image.external.url}
-                alt="This is story"
-                priority
-                width={700}
-                height={400}
-              /> 
-            </div>
-          : 
-            <RichTextRenderer key={index} richTextData={block} /> }
+        <>
+          {block.type === "image" ?
+          <div className="pb-10 flex flex-col justify-center items-center">
+            <Image
+              src={block.image.external.url}
+              alt="This is journal"
+              priority
+              width={700}
+              height={400}
+            /> 
           </div>
+        : 
+          <RichTextRenderer key={index} richTextData={block} /> }
+        </>
         ))}
       </div>
     </div>

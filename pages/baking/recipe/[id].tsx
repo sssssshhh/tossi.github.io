@@ -14587,25 +14587,6 @@ export default function Detail() {
   }
     ];
     
-//   useEffect(() => {
-//     async function fetchData() {
-//       try {
-//         // const response = await fetch(`/api/pages/${router.query.id}`);
-
-//         // const responseData = await response.json();
-//         const responseData2 = myData.filter(result => 
-//           result.results[0].parent.page_id = String(router.query.id)
-//           );
-
-//       //  setTitle(responseData2.properties.title.title[0].plain_text);
-//        setTitle(responseData2[0].title);
-
-//       } catch (error) {
-//         console.error('Error fetching title data:', error);
-//       }
-//     }
-//     fetchData();
-//   }, [router.query.id]);
 
   useEffect(() => {
     async function fetchData() {
@@ -14614,7 +14595,7 @@ export default function Detail() {
         // const responseData = await response.json();
 
         const responseData2 = myData.find(result => 
-          result.results[0].parent.page_id = String(router.query.id)
+          result.results[0].parent.page_id === String(router.query.id)
         );
 
         let order = 1;
