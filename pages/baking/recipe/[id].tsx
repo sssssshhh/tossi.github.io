@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import RichTextRenderer from "@/styles/RichTextRenderer";
 
-
 export default function Detail() {
   const router = useRouter();
   const [blocks, setBlocks] = useState<any[]>([]);
@@ -14588,43 +14587,52 @@ export default function Detail() {
   }
     ];
     
+//   useEffect(() => {
+//     async function fetchData() {
+//       try {
+//         // const response = await fetch(`/api/pages/${router.query.id}`);
+
+//         // const responseData = await response.json();
+//         const responseData2 = myData.filter(result => 
+//           result.results[0].parent.page_id = String(router.query.id)
+//           );
+
+//       //  setTitle(responseData2.properties.title.title[0].plain_text);
+//        setTitle(responseData2[0].title);
+
+//       } catch (error) {
+//         console.error('Error fetching title data:', error);
+//       }
+//     }
+//     fetchData();
+//   }, [router.query.id]);
+
   useEffect(() => {
     async function fetchData() {
       try {
-        // const response = await fetch(`/api/pages/${router.query.id}`);
-
+        // const response = await fetch(`/api/blocks/${router.query.id}`);
         // const responseData = await response.json();
-        const responseData2 = myData.filter(result => 
+
+        const responseData2 = myData.find(result => 
           result.results[0].parent.page_id = String(router.query.id)
-          );
-
-      //  setTitle(responseData2.properties.title.title[0].plain_text);
-       setTitle(responseData2[0].title);
-
-      } catch (error) {
-        console.error('Error fetching title data:', error);
-      }
-    }
-    fetchData();
-  }, [router.query.id]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(`/api/blocks/${router.query.id}`);
-        const responseData = await response.json();
+        );
 
         let order = 1;
-        for (const block of responseData.results) {
-          if (block.type === "numbered_list_item") {
-            const content = block.numbered_list_item.rich_text[0].text.content
-            block.numbered_list_item.rich_text[0].text.content 
-            = `${order}.${block.numbered_list_item.rich_text[0].text.content}`;
-            order++;
-          }
+        if(responseData2) {
+            setTitle(responseData2.title);
+            for (const block of responseData2.results) {
+                if (block.type === "numbered_list_item") {
+                    if(block.numbered_list_item){
+                        const content = block.numbered_list_item.rich_text[0].text.content
+                        block.numbered_list_item.rich_text[0].text.content 
+                        = `${order}.${block.numbered_list_item.rich_text[0].text.content}`;
+                        order++;
+                    }
+                }
+              }
+              setBlocks(responseData2.results);
         }
-
-        setBlocks(responseData.results);
+  
       } catch (error) {
         console.error('Error fetching block data:', error);
       }
