@@ -360,7 +360,7 @@ export default function Story(){
   return (
     <div className="w-full h-3/4 px-14 pt-28 flex flex-col justify-center items-center space-y-10">
       <div className="w-full flex flex-col justify-center items-center mb-16">
-        <div className="py-6 text-3xl text-amber-700">BAKING JOURNAL</div>
+        <div className="py-6 text-3xl text-amber-700">BAKING STORY</div>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 mt-2 gap-3">
       {storys.map((story, index) => (
