@@ -9,7 +9,7 @@ export default function Detail() {
   const [title, setTitle] = useState("");
   const myData = [
     {
-        "title": "카카오? 코코아?",
+        "title":"카카오? 코코아?",
         "object": "list",
         "results": [
             {
@@ -90,7 +90,7 @@ export default function Detail() {
         "block": {}
     },
     {
-        "title": "아마씨 달걀? 치아씨드 달걀?",
+        "title":"아마씨 달걀? 치아씨드 달걀?",
         "object": "list",
         "results": [
             {
@@ -515,7 +515,7 @@ export default function Detail() {
         "block": {}
     },
     {
-        "title": "아몬드 가루",
+        "title":"아몬드 가루",
         "object": "list",
         "results": [
             {
@@ -732,7 +732,7 @@ export default function Detail() {
         "block": {}
     },
     {
-        "title": "Xanthan Gum (잔탄검)",
+        "title":"Xanthan Gum (잔탄검)",
         "object": "list",
         "results": [
             {
@@ -849,7 +849,7 @@ export default function Detail() {
         "block": {}
     },
     {
-        "title": "Alll about 이스트(Yeast)",
+        "title":"Alll about 이스트(Yeast)",
         "object": "list",
         "results": [
             {
@@ -930,7 +930,7 @@ export default function Detail() {
         "block": {}
     },
     {
-        "title": "스콘? 비스킷?",
+        "title":"스콘? 비스킷?",
         "object": "list",
         "results": [
             {
@@ -1311,36 +1311,36 @@ export default function Detail() {
         "type": "block",
         "block": {}
     }
-];
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const response = await fetch(`/api/pages/${router.query.id}`);
-
-  //       const responseData = await response.json();
-  //       setTitle(responseData.properties.title.title[0].plain_text);
-  //     } catch (error) {
-  //       console.error('Error fetching title data:', error);
-  //     }
-  //   }
-  //   fetchData();
-  // }, [router.query.id]);
+]
 
   useEffect(() => {
     async function fetchData() {
       try {
-        // const response = await fetch(`/api/blocks/${router.query.id}`);
+        // const response = await fetch(`/api/pages/${router.query.id}`);
         // const responseData = await response.json();
 
         const responseData2 = myData.find(result => 
           result.results[0].parent.page_id = String(router.query.id)
         );
-        if(responseData2){
+
+        if(responseData2) {
           setTitle(responseData2.title);
           setBlocks(responseData2.results);
         }
+      } catch (error) {
+        console.error('Error fetching title data:', error);
+      }
+    }
+    fetchData();
+  }, [router.query.id]);
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(`/api/blocks/${router.query.id}`);
+
+        const responseData = await response.json();
+        setBlocks(responseData.results);
       } catch (error) {
         console.error('Error fetching block data:', error);
       }
