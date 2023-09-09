@@ -2327,19 +2327,19 @@ export default function Detail() {
     fetchData();
   }, [router.query.id]);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(`/api/blocks/${router.query.id}`);
+//   useEffect(() => {
+//     async function fetchData() {
+//       try {
+//         const response = await fetch(`/api/blocks/${router.query.id}`);
 
-        const responseData = await response.json();
-        setBlocks(responseData.results);
-      } catch (error) {
-        console.error('Error fetching block data:', error);
-      }
-    }
-    fetchData();
-  }, [router.query.id]);
+//         const responseData = await response.json();
+//         setBlocks(responseData.results);
+//       } catch (error) {
+//         console.error('Error fetching block data:', error);
+//       }
+//     }
+//     fetchData();
+//   }, [router.query.id]);
 
   return (
     <div className="w-full h-full px-14 py-28 flex flex-col justify-center items-center space-y-10">
