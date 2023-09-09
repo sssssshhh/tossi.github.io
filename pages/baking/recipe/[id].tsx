@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import RichTextRenderer from "@/styles/RichTextRenderer";
+import myData from "./data.js";
 
 export default function Detail() {
   const router = useRouter();
@@ -11,10 +12,16 @@ export default function Detail() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(`/api/pages/${router.query.id}`);
+        // const response = await fetch(`/api/pages/${router.query.id}`);
 
-        const responseData = await response.json();
-        setTitle(responseData.properties.title.title[0].plain_text);
+        // const responseData = await response.json();
+        const responseData2 = myData.filter(result => 
+          result.results[0].parent.page_id = String(router.query.id)
+          );
+
+      //  setTitle(responseData2.properties.title.title[0].plain_text);
+       setTitle(responseData2[0].title);
+
       } catch (error) {
         console.error('Error fetching title data:', error);
       }
@@ -45,8 +52,8 @@ export default function Detail() {
     }
     fetchData();
   }, [router.query.id]);
-
-    return (  
+  console.log(myData);
+    return ( 
       <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
         <div className="w-[500px] h-1/4 flex flex-col justify-center items-center">
           <div className="text-3xl text-amber-700 pt-10 pb-12">{title}
