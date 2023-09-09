@@ -8,17 +8,88 @@ type Props = {
   num?: number;
 };
 
-export default function Recipes( results: any) {
-  console.log(results);
+export default function Recipes() {
+  const results = {
+    "object": "list",
+    "results": [
+        {
+            "object": "page",
+            "id": "83c7212f-3944-46bf-8397-040dbc10c534",
+            "created_time": "2023-08-18T03:08:00.000Z",
+            "last_edited_time": "2023-08-18T04:39:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "6afa59b7-ee33-4b1f-a469-cc07a6f31df4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "6afa59b7-ee33-4b1f-a469-cc07a6f31df4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1b83168b-8cec-4490-abfe-757fe53936bf"
+            },
+            "archived": false,
+            "properties": {
+                "level": {
+                    "id": "k%7Cpe",
+                    "type": "select",
+                    "select": {
+                        "id": "gJJA",
+                        "name": "Easy",
+                        "color": "blue"
+                    }
+                },
+                "image": {
+                    "id": "q_D%3C",
+                    "type": "url",
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/ChocolateCoconutCookie.jpg"
+                },
+                "title": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "비건 초콜릿 코코넛 쿠키",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "비건 초콜릿 코코넛 쿠키",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/83c7212f394446bf8397040dbc10c534",
+            "public_url": null
+        }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {}
+};
+
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/api/DB/recipe');
-        const responseData = await response.json();
+        // const response = await fetch('/api/DB/recipe');
+        // const responseData = await response.json();
 
-        const updatedRecipes = responseData.results
+        const updatedRecipes = results.results
         .filter((result: any) => (
           result.properties.title.title[0]?.plain_text && result.properties.image.url
         ))
