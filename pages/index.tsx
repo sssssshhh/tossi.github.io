@@ -1,6 +1,13 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = () => {
+    console.log("sumbit")
+  };
+
   return (
     <main className="w-full h-full px-3 md:px-14 pt-28 flex flex-col space-y-10">
       <div className="w-full xl:h-3/4 h-4/2 pb-10 lg:pb-0 flex flex-col items-center">
@@ -25,23 +32,22 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full pt-5">
-          <form action="/submit" method="POST">
-            <div className="w-full xl:h-1/4 h-2/3">
-              <input
-                type="text"
-                className="w-3/6 border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
-                placeholder="뉴스레터 구독 email을 입력해주세요"
-                name="email"
-              />
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg ml-2">
-                전송
-              </button>
-            </div>
-          </form>
-        </div>
+        {/* <div className="w-full pt-5">
+        <input
+          type="text"
+          className="w-3/6 border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
+          placeholder="뉴스레터를 구독하실 email을 입력해주세요"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button
+          type="button"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg ml-2"
+          onClick={handleSubmit}
+        >
+          전송
+        </button>
+        </div> */}
       </div>
     </main>
   )
