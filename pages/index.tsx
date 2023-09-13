@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center">
           <div className="w-96 h-72 md:w-[600px] md:h-[400px] relative">
             <Image
-              src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/plate1.jpg"
+              src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/green.jpeg"
               alt="cookie"
               priority
               fill
