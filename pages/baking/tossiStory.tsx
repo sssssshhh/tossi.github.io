@@ -6,7 +6,7 @@ export default function TossiStory(){
       <div className="pt-9 text-3xl text-amber-700">About Tossi</div>
       <div className="w-96 h-72 md:w-[600px] md:h-[400px] relative">
         <Image
-          src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/chopstick.jpeg"
+          src="https://tossibaking.s3.ap-northeast-2.amazonaws.com/baking.jpeg"
           alt="cookie"
           priority
           fill
