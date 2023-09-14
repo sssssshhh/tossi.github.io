@@ -1364,7 +1364,7 @@ export default function Detail() {
           <div className="pb-10 flex flex-col justify-center items-center">
             <Image
               src={block.image.external.url}
-              alt="This is journal"
+              alt="This is story"
               priority
               width={700}
               height={400}
