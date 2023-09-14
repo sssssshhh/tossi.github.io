@@ -32,22 +32,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="w-full pt-5">
-        <input
-          type="text"
-          className="w-3/6 border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
-          placeholder="뉴스레터를 구독하실 email을 입력해주세요"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button
-          type="button"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg ml-2"
-          onClick={handleSubmit}
-        >
-          전송
-        </button>
-        </div> */}
       </div>
     </main>
   )
