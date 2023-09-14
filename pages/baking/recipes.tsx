@@ -1109,6 +1109,7 @@ export default function Recipes() {
   };
 
   const filterRecipesByLevel = (): Recipe[] => {
+    console.log("test");
     if (selectedValue === "") {
       return recipes;
     } else {
