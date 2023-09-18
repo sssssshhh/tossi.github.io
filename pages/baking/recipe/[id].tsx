@@ -1523,7 +1523,7 @@ export default function Detail() {
       "block": {}
   },
   {
-    "title": "비건 글루텐 프리 오트밀 초콜릿 칩 쿠키",
+    "title": "비건 글루텐 프리 라즈베리 머핀",
     "object": "list",
     "results": [
         {
@@ -2761,7 +2761,7 @@ export default function Detail() {
     "block": {}
   },
   {
-    "title": "원볼 비건 글루텐 프리 그래놀라 쿠키",
+    "title": "비건 글루텐 프리 블루베리 머핀",
     "object": "list",
     "results": [
         {
@@ -2788,7 +2788,7 @@ export default function Detail() {
                 "caption": [],
                 "type": "external",
                 "external": {
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/bluberryMurfin.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/blueberryMuffin.jpg"
                 }
             }
         },
@@ -4035,7 +4035,7 @@ export default function Detail() {
     "block": {}
   },
   {
-    "title": "비건 더블 로투스 쿠키",
+    "title": "비건 글루텐 프리 초코칩 스콘",
     "object": "list",
     "results": [
         {
@@ -4707,7 +4707,7 @@ export default function Detail() {
     "block": {}
   },
   {
-    "title": "비건 오레오 청크 쿠키",
+    "title": "비건 글루텐 프리 바나나 블루베리 스콘",
     "object": "list",
     "results": [
         {
@@ -4734,7 +4734,7 @@ export default function Detail() {
                 "caption": [],
                 "type": "external",
                 "external": {
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/bananaBlueberryScorn.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/bananaBlueberryScorn2.jpg"
                 }
             }
         },
@@ -5877,7 +5877,7 @@ export default function Detail() {
     "block": {}
   },
   {
-  "title": "비건 라즈베리 콩포트 초콜릿 쿠키",
+    "title": "비건 글루텐 프리 비건 코코넛 스콘",
     "object": "list",
     "results": [
         {
@@ -7065,7 +7065,7 @@ export default function Detail() {
     "block": {}
   },
   {
-      "title": "크랙 초코 쿠키",
+    "title": "비컨 초코 케이크 스콘",
     "object": "list",
     "results": [
         {
@@ -7712,7 +7712,7 @@ export default function Detail() {
     "block": {}
   },
   {
-      "title": "비건 피넛 버터 쿠키",
+      "title": "비건 르뱅 쿠키",
       "object": "list",
       "results": [
           {
@@ -9031,7 +9031,7 @@ export default function Detail() {
       "block": {}
   },
   {
-      "title": "비건 르뱅 쿠키",
+    "title": "비건 피넛 버터 쿠키",
     "object": "list",
     "results": [
         {
@@ -9678,7 +9678,7 @@ export default function Detail() {
     "block": {}
   },
   {
-    "title": "비건 초코 케이크 스콘",
+    "title": "크랙 초코 쿠키",
     "object": "list",
     "results": [
         {
@@ -10307,7 +10307,7 @@ export default function Detail() {
     "block": {}
   },
   {
-      "title": "비건 글루텐 프리 비건 코코넛 스콘",
+    "title": "비건 라즈베리 콩포트 초콜릿 쿠키",
     "object": "list",
     "results": [
         {
@@ -11151,7 +11151,7 @@ export default function Detail() {
     "block": {}
   },
   {
-      "title": "비건 글루텐 프리 바나나 블루베리 스콘",
+    "title": "비건 오레오 청크 쿠키",
     "object": "list",
     "results": [
         {
@@ -11178,7 +11178,7 @@ export default function Detail() {
                 "caption": [],
                 "type": "external",
                 "external": {
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oreoCookie.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oreoCookie2.jpg"
                 }
             }
         },
@@ -11934,7 +11934,7 @@ export default function Detail() {
     "block": {}
   },
   {
-      "title": "비건 글루텐 프리 초코칩 스콘",
+    "title": "비건 더블 로투스 쿠키",
     "object": "list",
     "results": [
         {
@@ -12717,7 +12717,7 @@ export default function Detail() {
     "block": {}
   },
   {
-      "title": "비건 글루텐 프리 블루베리 머핀",
+      "title": "원볼 비건 글루텐 프리 그래놀라 쿠키",
       "object": "list",
       "results": [
           {
@@ -12773,7 +12773,7 @@ export default function Detail() {
                       {
                           "type": "text",
                           "text": {
-                              "content": "그래놀라 맛있는데,  사서 먹으면  가격에 비해 양이 적지 않나요?\n집에서 하면 사서 먹는 맛을 내기 어렵죠?\n이런 고민을 하셨다면, 비건 글루텐 프리 그래놀라 쿠키를 한 번 만들어 보세요!\n그래놀라보다 만들기 쉬우면서  맛있고 손이 가는 쿠키예요!\n오일이 없이, 땅콩버터로 고소하게 만들었어요.\n향긋한 메이플 시럽으로 풍미를 더해 주었답니다.",
+                              "content": "그래놀라 맛있는데, 사서 먹으면  가격에 비해 양이 적지 않나요?\n집에서 하면 사서 먹는 맛을 내기 어렵죠?\n이런 고민을 하셨다면, 비건 글루텐 프리 그래놀라 쿠키를 한 번 만들어 보세요!\n그래놀라보다 만들기 쉬우면서  맛있고 손이 가는 쿠키예요!\n오일이 없이, 땅콩버터로 고소하게 만들었어요.\n향긋한 메이플 시럽으로 풍미를 더해 주었답니다.",
                               "link": null
                           },
                           "annotations": {
@@ -13260,7 +13260,7 @@ export default function Detail() {
       "block": {}
   },
   {
-      "title": "비건 글루텐 프리 라즈베리 머핀",
+      "title": "비건 글루텐 프리 오트밀 초콜릿 칩 쿠키",
       "object": "list",
       "results": [
           {
@@ -13287,7 +13287,7 @@ export default function Detail() {
                   "caption": [],
                   "type": "external",
                   "external": {
-                      "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oatmeal.jpg"
+                      "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oatmealChocolateCookie.jpg"
                   }
               }
           },
@@ -13932,7 +13932,7 @@ export default function Detail() {
       "block": {}
   },
   {
-      "title": "비건 글루텐 프리 바나나 초콜릿 머핀",
+      "title": "비건 초콜릿 코코넛 쿠키",
       "object": "list",
       "results": [
           {

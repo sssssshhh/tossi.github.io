@@ -169,7 +169,7 @@ export default function Recipes() {
                 "image": {
                     "id": "q_D%3C",
                     "type": "url",
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/bluberryMurfin.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/blueberryMuffin.jpg"
                 },
                 "title": {
                     "id": "title",
@@ -293,7 +293,7 @@ export default function Recipes() {
                 "image": {
                     "id": "q_D%3C",
                     "type": "url",
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/bananaBlueberryScorn.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/bananaBlueberryScorn2.jpg"
                 },
                 "title": {
                     "id": "title",
@@ -789,7 +789,7 @@ export default function Recipes() {
                 "image": {
                     "id": "q_D%3C",
                     "type": "url",
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oreoCookie.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oreoCookie2.jpg"
                 },
                 "title": {
                     "id": "title",
@@ -975,7 +975,7 @@ export default function Recipes() {
                 "image": {
                     "id": "q_D%3C",
                     "type": "url",
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oatmeal.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/oatmealChocolateCookie.jpg"
                 },
                 "title": {
                     "id": "title",
@@ -1109,13 +1109,10 @@ export default function Recipes() {
   };
 
   const filterRecipesByLevel = (): Recipe[] => {
-    console.log("test");
-    if (selectedValue === "") {
-      return recipes;
-    } else {
-      return recipes.filter((recipe) => recipe.level === selectedValue);
-    }
-  };
+    return selectedValue === "" 
+        ? recipes 
+        : recipes.filter((recipe) => recipe.level === selectedValue);
+    };
   const filteredRecipes: Recipe[] = filterRecipesByLevel();
 
     return (
@@ -1141,15 +1138,17 @@ export default function Recipes() {
           {filteredRecipes.map((recipe, index) => (
             <Link key={index} href={{ pathname: `/baking/recipe/${recipe.id}` }}>
               <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipe.id}`}>
-                <div className="w-80 h-64 relative z-0">
-                  <Image
-                    src={recipe.img}
-                    alt="cookie"
-                    priority
-                    fill />
-                </div>
+                  <div className="w-[300px] h-[400px]">
+                    <Image
+                        src={recipe.img}
+                        alt="cookie"
+                        width={300}
+                        height={200}
+                        priority
+                    />
+                  </div>
                 <i className="text-xs text-black self-end">level: {recipe.level}</i>
-                <div className="text-base sm:text-xl font-extralight ">{recipe.title}</div>
+                <div className="text-base sm:text-xl font-extralight">{recipe.title}</div>
               </div>
             </Link>
           ))}
