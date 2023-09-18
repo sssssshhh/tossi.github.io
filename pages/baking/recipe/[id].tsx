@@ -7065,7 +7065,7 @@ export default function Detail() {
     "block": {}
   },
   {
-    "title": "비컨 초코 케이크 스콘",
+    "title": "비건 초코 케이크 스콘",
     "object": "list",
     "results": [
         {
@@ -7092,7 +7092,7 @@ export default function Detail() {
                 "caption": [],
                 "type": "external",
                 "external": {
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/chocoCakeScorn.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/chocoCakeScorn2.jpg"
                 }
             }
         },
@@ -14587,7 +14587,6 @@ export default function Detail() {
   }
     ];
     
-
   useEffect(() => {
     async function fetchData() {
       try {
@@ -14613,7 +14612,6 @@ export default function Detail() {
               }
               setBlocks(responseData2.results);
         }
-  
       } catch (error) {
         console.error('Error fetching block data:', error);
       }

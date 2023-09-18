@@ -417,7 +417,7 @@ export default function Recipes() {
                 "image": {
                     "id": "q_D%3C",
                     "type": "url",
-                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/chocoCakeScorn.jpg"
+                    "url": "https://tossibaking.s3.ap-northeast-2.amazonaws.com/chocoCakeScorn2.jpg"
                 },
                 "title": {
                     "id": "title",

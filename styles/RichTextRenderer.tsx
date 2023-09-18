@@ -17,7 +17,7 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
       richData = {"text": text, "className": ""};
     } else if(richTextData.paragraph.rich_text.length > 0) {
       let text = richTextData.paragraph.rich_text[0].text.content;
-      let className = "";
+      let className = "break-keep";
   
       richData = {"text": text, "className": className};
     } 
@@ -27,7 +27,7 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
   const richData = convertRichTextToHTML(richTextData);
 
   return richData.text ? 
-  <p className={richData.className} dangerouslySetInnerHTML={{ __html: richData.text }} /> 
+  <p className={richData.className}  dangerouslySetInnerHTML={{ __html: richData.text }} /> 
   : <br></br>
 };
 
