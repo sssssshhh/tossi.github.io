@@ -14620,8 +14620,8 @@ export default function Detail() {
   }, [router.query.id]);
 
     return ( 
-      <div className="w-full h-full px-14 pt-28 flex flex-col justify-center items-center space-y-10">
-        <div className="w-[500px] h-1/4 flex flex-col justify-center items-center">
+      <div className="w-full h-full md:px-14 pt-28 flex flex-col justify-center items-center space-y-10">
+        <div className="h-1/4 px-5 flex flex-col justify-center items-center">
           <div className="text-3xl text-amber-700 pt-10 pb-12">{title}
           </div>
           <div className="h-5/6 pb-20 text-base tracking-wide leading-8">

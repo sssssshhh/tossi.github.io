@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface RichTextRendererProps {
@@ -11,6 +10,7 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
     className: string;
   } => {
     let richData = {"text": "", "className": ""};
+
     if(richTextData.numbered_list_item){
       let text = richTextData.numbered_list_item.rich_text[0].text.content;
       
