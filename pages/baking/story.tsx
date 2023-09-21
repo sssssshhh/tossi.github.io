@@ -331,7 +331,7 @@ export default function Story(){
     "has_more": false,
     "type": "page_or_database",
     "page_or_database": {}
-};
+    };
 
   useEffect(() => {
     async function fetchData() {
