@@ -2311,7 +2311,6 @@ export default function Detail() {
       try {
         // const response = await fetch(`/api/pages/${router.query.id}`);
         // const responseData = await response.json();
-
         const responseData2 = myData2.find(result => 
             result.results[0].parent.page_id === String(router.query.id)
           );
