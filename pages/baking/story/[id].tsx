@@ -1336,7 +1336,6 @@ export default function Detail() {
     }
     fetchData();
   }, [router.query.id]);
-
 //   useEffect(() => {
 //     async function fetchData() {
 //       try {
