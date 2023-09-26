@@ -14586,7 +14586,7 @@ export default function Detail() {
       "block": {}
   }
 ];
-    
+
   useEffect(() => {
     async function fetchData() {
       try {
