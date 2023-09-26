@@ -507,7 +507,6 @@ export default function Journal(){
           title: result.properties.title.title[0].plain_text,
           img: result.properties.image.url,
         }));
-
         setJournals(updatedJournals);
       } catch (error) {
         console.error('Error fetching data:', error);
