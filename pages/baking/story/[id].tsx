@@ -1351,7 +1351,7 @@ export default function Detail() {
 //   }, [router.query.id]);
 
   return (
-    <div className="w-full h-full md:px-14 py-28 flex flex-col justify-center items-center space-y-10">
+    <div className="w-full h-full py-28 md:px-14 flex flex-col justify-center items-center space-y-10">
       <div className="h-1/4 text-3xl flex flex-col justify-center items-center text-center space-y-3">
         {title}
       </div>
