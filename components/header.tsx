@@ -15,27 +15,27 @@ export default function Header(){
           <ul className="flex flex-col items-center xl:flex-row xl:justify-end w-full pt-3 space-y-1">
             <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/tossiStory">
-                <div className="text-base text-amber-700 hover:text-amber-300">Tossi Story</div>
+                <div className="text-base text-amber-700 hover:text-amber-300 transition duration-700 ease-in-out">Tossi Story</div>
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/recipes">
-                <div className="text-base text-amber-700 hover:text-amber-300">Recipes</div>
+                <div className="text-base text-amber-700 hover:text-amber-300 transition duration-700 ease-in-out">Recipes</div>
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/story">
-                <div className="text-base text-amber-700 hover:text-amber-300">Baking Story</div>
+                <div className="text-base text-amber-700 hover:text-amber-300 transition duration-700 ease-in-out">Baking Story</div>
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="/baking/journal">
-                <div className="text-base text-amber-700 hover:text-amber-300">Baking Journal</div>
+                <div className="text-base text-amber-700 hover:text-amber-300 transition duration-700 ease-in-out">Baking Journal</div>
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block">
               <Link href="https://www.instagram.com/tossi.baking" target="_blank">
-                <div className="text-base text-amber-700 hover:text-amber-300">Instagram</div>
+                <div className="text-base text-amber-700 hover:text-amber-300 transition duration-700 ease-in-out">Instagram</div>
               </Link>
             </li>
           </ul>
