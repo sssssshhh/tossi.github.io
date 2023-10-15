@@ -1,12 +1,6 @@
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = () => {
-  };
-
   return (
     <main className="w-full h-full px-3 md:px-14 pt-28 flex flex-col space-y-10">
       <div className="w-full xl:h-3/4 h-4/2 pb-10 lg:pb-0 flex flex-col items-center">
