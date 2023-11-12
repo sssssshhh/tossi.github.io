@@ -15,14 +15,15 @@ export default function Header(){
     return (
       <>
         <title>TOSSI</title>
-        <main className="fixed w-full group-hover:h-60 xl:h-28 flex justify-between p-4
-        flex-col items-start xl:flex-row xl:justify-center bg-white group z-10">
-          <div className="hover:cursor-pointer" onClick={() => setPage("Home")}>
+        <main className="fixed w-full group-hover:h-60 xl:h-28 flex justify-between items-center
+        flex-col xl:flex-row xl:justify-center bg-white group z-10">
+          <div className="flex-1 hover:cursor-pointer pt-8 xl:pt-0" onClick={() => setPage("Home")}>
             <Link legacyBehavior href="/">
               <div className="text-2xl text-amber-700 font-bold pl-5">TOSSI</div>
             </Link>
           </div>
-          <ul className="flex flex-col items-center xl:flex-row xl:justify-end w-full pt-3 space-y-1">
+          <div>
+            <ul className="flex flex-col items-center pl-16 py-2 xl:p-0 xl:flex-row xl:justify-end w-full space-y-1">
             <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("TossiStory")}>
               <Link href="/baking/tossiStory">
                 <div className={cls(
@@ -72,7 +73,8 @@ export default function Header(){
                 <div className="text-base text-amber-700 hover:text-amber-300 transition duration-700 ease-in-out">Instagram</div>
               </Link>
             </li>
-          </ul>
+            </ul>
+          </div>
         </main>
       </>
     )
