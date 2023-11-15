@@ -9,15 +9,15 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richTextData }) => 
     text: string,
     className: string;
   } => {
-    let richData = {"text": "", "className": ""};
+    let richData = {"text": "", "className": "no-select"};
 
     if(richTextData.numbered_list_item){
       let text = richTextData.numbered_list_item.rich_text[0].text.content;
       
-      richData = {"text": text, "className": ""};
+      richData = {"text": text, "className": "no-select"};
     } else if(richTextData.paragraph.rich_text.length > 0) {
       let text = richTextData.paragraph.rich_text[0].text.content;
-      let className = "break-keep";
+      let className = "break-keep no-select";
   
       richData = {"text": text, "className": className};
     } 
