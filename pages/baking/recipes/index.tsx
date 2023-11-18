@@ -1136,7 +1136,7 @@ export default function Recipes() {
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-3 mt-2 gap-3">
           {filteredRecipes.map((recipe, index) => (
-            <Link key={index} href={{ pathname: `/baking/recipe/${recipe.id}` }}>
+            <Link key={index} href={{ pathname: `/baking/recipes/${recipe.id}` }}>
               <div className="flex flex-col items-center space-y-2 text-amber-800" key={`recipe-${recipe.id}`}>
                   <div className="w-[300px] h-[400px]">
                     <Image

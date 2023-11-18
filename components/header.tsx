@@ -9,7 +9,7 @@ function cls(...classNames:string[]){
 
 export default function Header(){
   const [page, setPage] = useState<
-    "Home" | "TossiStory" | "Recipes" | "Story" | "Journal">
+    "Home" | "TossiStory" | "Recipes" | "Stories" | "Journals">
     ("Home");
 
     return (
@@ -47,9 +47,9 @@ export default function Header(){
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("Story")}>
-              <Link href="/baking/story">
+              <Link href="/baking/stories">
                 <div className={cls(
-                page === "Story" 
+                page === "Stories" 
                 ?
                 "text-amber-950 underline underline-offset-8"
                 :
@@ -58,9 +58,9 @@ export default function Header(){
               </Link>
             </li>
             <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("Journal")}>
-              <Link href="/baking/journal">
+              <Link href="/baking/journals">
                 <div className={cls(
-                page === "Journal" 
+                page === "Journals" 
                 ?
                 "text-amber-950 underline underline-offset-8"
                 :
