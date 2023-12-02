@@ -10,4 +10,13 @@ body {
 .no-select {
   user-select: none;
 }
+
+div > img {
+  transition: all 0.5s ease-in-out;
+}
+
+div > img:hover {
+  box-shadow:0 6px 14px rgba(0, 0, 0, 0.24);
+  transform: translate(0, -6px);
+}
   
