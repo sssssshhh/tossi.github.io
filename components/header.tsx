@@ -46,7 +46,7 @@ export default function Header(){
                 )}>Recipes</div>
               </Link>
             </li>
-            <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("Story")}>
+            <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("Stories")}>
               <Link href="/baking/stories">
                 <div className={cls(
                 page === "Stories" 
@@ -57,7 +57,7 @@ export default function Header(){
                 )}>Baking Story</div>
               </Link>
             </li>
-            <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("Journal")}>
+            <li className="pr-12 hidden xl:block group-hover:block" onClick={() => setPage("Journals")}>
               <Link href="/baking/journals">
                 <div className={cls(
                 page === "Journals" 
